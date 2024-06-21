@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    double a,b;
+    cout<<"**WELCOME!!**"<<endl;
+    cout<<"Enter first number"<<endl;
+    cin>>a;
+    cout<<"Enter second number"<<endl;
+    cin>>b;
+    cout<<"Enter operation to perform:+, -, *, / :"<<endl;
+    char c;
+    cin>>c;
+    switch(c)
+    {
+        case '+':
+        {
+            cout<<"Addition Operation\na+b = "<<a<<"+"<<b<<"= "<<a+b;
+            break;
+        }
+        case '-':
+        {
+            cout<<"Subtraction Operation\na-b = "<<a<<"-"<<b<<"= "<<a-b;
+            break;
+        }
+        case '*':
+        {
+            cout<<"Multiplication Operation\na*b = "<<a<<"*"<<b<<"= "<<a*b;
+            break;
+        }
+        case '/':
+        {
+            cout<<"Division Operation\n"<<"a/b = "<<a<<"/"<<b<<"= "<<a/b;
+            break;
+        }
+        default:
+        {
+            cout<<"Wrong Input";
+        }
+    }
+}
