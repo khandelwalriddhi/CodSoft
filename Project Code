@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int randomnumber=rand()%100+1;
+    int guess=0;
+    cout<<"Welcome to Number Guessing Game!!"<<endl;
+    cout<<"A number is generated between 1 and 100"<<endl;
+    cout<<"Can you guess the number"<<endl;
+    cout<<"Condition is you have 10 guesses only"<<endl;
+    int count=0;
+    int ten=10;
+    while(guess != randomnumber && ten--)
+    {
+        cout<<"Enter your guess"<<endl;
+        cin>>guess;
+        if(guess+2==randomnumber || guess-2==randomnumber || guess+1==randomnumber || guess+1==randomnumber)
+        {
+           cout<<"You're close"<<endl;
+           count++;
+        }
+        else if(guess>randomnumber)
+        {
+           cout<<"Too high...Try Again"<<endl;
+           count++;
+        }
+        else if(guess<randomnumber)
+        {
+           cout<<"Too low...Try Again"<<endl;
+           count++;
+        }
+        else 
+        {
+        cout<<"Congratulations!! You guessed it right."<<endl;
+        cout<<"You took "<<count<<" guesses"<<endl;
+        }
+    }
+    if(count<=10)
+    {
+        cout<<"Winner"<<endl;
+    }
+    else
+    {
+        cout<<"You took more than 10 guesses"<<endl;
+    }
+}
